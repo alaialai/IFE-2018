@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初步接触CSS2d变形</title>
+	<style >
+		#box{
+			width: 680px;
+			height:240px;
+			background-color: #fff;
+			margin:auto;
+			display: flex;
+			justify-content: space-around;
+		}
+		#box0,#box1,#box2,#box3,#box4,#box5{
+			width:55px;
+			height: 65px;
+			border:1px solid rgb(235,235,235);
+			background-color: rgb(247,246,246);
+			display: inline-flex;
+			margin-top: 30px;
+		}
+		#box1{
+			transform:skewX(30deg);
+			-ms-transform:skewX(30deg);
+			-webkit-transform:skewX(30deg);
+			-o-transform:skewX(30deg);
+			-moz-transform:skewX(30deg);
+		}
+		#box2{
+			transform: scaleX(0.5);
+			-ms-transform: scaleX(0.5);
+			-webkit-transform: scaleX(0.5);
+			-o-transform: scaleX(0.5);
+			-moz-transform: scaleX(0.5);
+		}
+		#box3{
+			transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+		}
+		#box4{
+			transform:translate(10px,20px);
+			-ms-transform:translate(10px,20px);
+			-webkit-transform:translate(10px,20px);
+			-o-transform:translate(10px,20px);
+			-moz-transform:translate(10px,20px);
+		}
+		#box5{
+			transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px,20px);
+			-webkit-transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px,20px);
+		}
+		.word{
+			width:55px;
+			height: 65px;
+			line-height: 65px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="box0"><div class="word">box0</div></div>
+		<div id="box1"><div class="word">box1</div></div>
+		<div id="box2"><div class="word">box2</div></div>
+		<div id="box3"><div class="word">box3</div></div>
+		<div id="box4"><div class="word">box4</div></div>
+		<div id="box5"><div class="word">box5</div></div>
+	</div>
+</body>
+</html>
