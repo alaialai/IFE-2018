@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D变形</title>
+	<style>
+		.img{
+			width: 250px;
+			height: 350px;
+			margin:auto;
+			transition-duration: 5s;
+		}
+		.front{
+			position: absolute;
+			z-index: 2;
+			transition-duration: 5s;
+		}
+		.back{
+			position: relative;
+			z-index:1;
+			transition-duration: 5s;
+		}
+		.img:hover {
+			transform:rotateY(180deg);
+			-webkit-transform:rotateY(180deg);
+		}
+		.img:hover .front{
+			z-index: 1;
+		}
+		.img:hover .back{
+			z-index: 2;
+		}
+	</style>
+</head>
+<body>
+	<div class="img">
+		<img class="front" src="images/front.jpg" alt="front">
+		<img class="back" src="images/back.jpg" alt="back">
+	</div>
+	
+</body>
+</html>
